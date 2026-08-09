@@ -20,3 +20,7 @@ frontend/.next/
 # OS
 .DS_Store
 Thumbs.db
+
+# Development backup files
+*.backup
+*.backup2
