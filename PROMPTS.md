@@ -102,3 +102,17 @@ This document summarizes the actual AI-assisted development work that shaped the
 
 - No API keys, secrets, passwords, tokens, or private information are included in this document.
 - AI coding assistants were used during development, and the work in this document reflects the actual repository history and validation steps performed.
+
+## Deployment Note — Render Free Tier
+
+The project is deployed using Render Free-tier services. After a period of inactivity, Render may spin down an instance. When the service is accessed again, the first request can take some time while the instance wakes up. This can appear as initial loading lag or delayed HTTP requests.
+
+This cold-start delay is a hosting-tier behavior and does not by itself indicate that the application is broken. Once the service wakes up, the application should respond normally.
+
+### Troubleshooting Lesson
+
+During the hackathon, we verified the actual application and production configuration before considering a hosting-platform change.
+
+A Render Free-tier cold start should **not be treated as a reason to migrate the project to Vercel, Netlify, or another platform**. Only an actual functional, configuration, or deployment problem should trigger a platform migration decision.
+
+For a live demonstration, opening the deployed service shortly before the demo allows the Render instance to wake up in advance.
